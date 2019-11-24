@@ -46,4 +46,9 @@ class MusicLibraryController
       puts "#{i}. #{a.name}"
     end
   end
+   def list_genres
+    Genre.all.sort{ |a, b| a.name <=> b.name }.each.with_index(1) do |g, i|
+      puts "#{i}. #{g.name}"
+    end
+  end
 end
